@@ -15,6 +15,9 @@ ENDIF()
 
 IF(UNIX)
     ADD_DEFINITIONS(-Wall -std=c++11 -fvisibility=hidden)
+    IF(APPLE)
+        ADD_DEFINITIONS(-stdlib=libc++)
+    ENDIF()
 ENDIF()
 
 # OS Definitions
